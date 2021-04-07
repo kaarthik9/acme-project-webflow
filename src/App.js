@@ -24,27 +24,17 @@ function App() {
     <Router>
       <div className={styles.App}>
         <Header showCart={showTheCart} showTheCart={showTheCart} />
-        {/* <HomePage /> */}
-        {/* <AboutPage /> */}
-        {/* <ShopPage /> */}
-        {/* <ContactPage /> */}
-        {/* <DonationPage /> */}
-        
+       
         <Switch>
           <Route exact path="/acme-project-webflow" component={HomePage} />
           <Route path="/acme-project-webflow/about" component={AboutPage} />
           <Route path="/acme-project-webflow/shop" component={ShopPage} />
           <Route path="/acme-project-webflow/donations" component={DonationPage} />
           <Route path="/acme-project-webflow/contact" component={ContactPage} />
+          <Route path="*" component={Page404} />
         </Switch>
-       
 
-        {/* <ProductPage name="Blue Canvas Pack"
-         productName="blue-canvas-pack"
-         amount="95"
-         sale="145"
-       /> */}
-        <Page404 />
+        
         <Footer />
       </div>
       </Router>
