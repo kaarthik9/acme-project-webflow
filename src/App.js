@@ -9,6 +9,8 @@ import ContactPage from "./Components/ContactPage/ContactPage";
 import DonationPage from "./Components/DonationPage/DonationPage";
 import ProductPage from "./Components/ProductPage/ProductPage";
 import HomePage from "./Components/HomePage/HomePage";
+
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -19,7 +21,7 @@ function App() {
   };
 
   return (
-    
+    <Router>
       <div className={styles.App}>
         <Header showCart={showTheCart} showTheCart={showTheCart} />
         {/* <HomePage /> */}
@@ -27,15 +29,15 @@ function App() {
         {/* <ShopPage /> */}
         {/* <ContactPage /> */}
         {/* <DonationPage /> */}
-        <Router>
+        
         <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/about" component={AboutPage} />
-          <Route path="/shop" component={ShopPage} />
-          <Route path="/donations" component={DonationPage} />
-          <Route path="/contact" component={ContactPage} />
+          <Route exact path="/acme-project-webflow" component={HomePage} />
+          <Route path="/acme-project-webflow/about" component={AboutPage} />
+          <Route path="/acme-project-webflow/shop" component={ShopPage} />
+          <Route path="/acme-project-webflow/donations" component={DonationPage} />
+          <Route path="/acme-project-webflow/contact" component={ContactPage} />
         </Switch>
-        </Router>
+       
 
         {/* <ProductPage name="Blue Canvas Pack"
          productName="blue-canvas-pack"
@@ -45,7 +47,7 @@ function App() {
         <Page404 />
         <Footer />
       </div>
-        
+      </Router>
     
   );
 }
