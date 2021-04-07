@@ -1,0 +1,47 @@
+.donationExplainer {
+  min-height: 550px;
+  padding-top: 151px;
+  padding-bottom: 35px;
+  background-image: linear-gradient(180deg, rgba(34, 34, 34, 0.56), #222), url("https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e85758a28ae07433140f0cb_jed-villejo-bEcC0nyIp2g-unsplash%20(1)%20(1).jpg");
+  background-position: 0px 0px, 50% 25%;
+  background-size: auto, cover;
+  color: #f9f9f9;
+}
+
+.donateHeading1 {
+  margin-bottom: -5px;
+  font-size: 38px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.donateHeading2 {
+  margin-bottom: 15px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.donateParagraph {
+  width: 65%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+/* Media Quries */
+
+@media screen and (max-width: 479px) {
+  .donateHeading1 {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+
+  .donateHeading2 {
+    font-size: 24px;
+  }
+
+  .donateParagraph {
+    width: 80%;
+    font-size: 13px;
+  }
+}

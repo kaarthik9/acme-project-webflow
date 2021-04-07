@@ -1,0 +1,103 @@
+.contactHeroSection {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #222;
+  color: #f9f9f9;
+}
+
+.contactHeroBgWrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+}
+
+.heading {
+  margin-top: 55px;
+  font-size: 38px;
+  line-height: 44px;
+}
+
+.contactBlockWrapper {
+  display: flex;
+}
+
+.contactBlock {
+  display: flex;
+  width: 30%;
+  min-height: 350px;
+  margin-top: 25px;
+  margin-right: 20px;
+  padding: 40px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #222;
+  text-align: center;
+}
+
+.contactIcon {
+  margin-bottom: 30px;
+}
+
+.imageDiv {
+  width: 45%;
+  height: 550px;
+  background-image: linear-gradient(90deg, #222, rgba(34, 34, 34, 0.18) 76%), url("https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e84f1e1f02ef1408ff221cc_vinicius-amano-4mK2KVuYrDs-unsplash%20(1)%20(1).jpg");
+  background-position: 0px 0px, 50% 50%;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+}
+
+@media screen and (max-width: 991px) {
+  .contactHeroBgWrapper {
+    flex-direction: column-reverse;
+  }
+
+  .contact {
+    position: static;
+    padding-bottom: 35px;
+  }
+
+  .contactBlockWrapper {
+    justify-content: space-between;
+  }
+
+  .contactBlock {
+    width: 48%;
+    margin-right: 0px;
+  }
+
+  .imageDiv {
+    width: 100%;
+    height: 350px;
+    background-image: linear-gradient(0deg, #222, rgba(34, 34, 34, 0.18) 76%), url("https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e84f1e1f02ef1408ff221cc_vinicius-amano-4mK2KVuYrDs-unsplash%20(1)%20(1).jpg");
+    background-position: 0px 0px, 50% 35%;
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contactBlockWrapper {
+    flex-direction: column;
+  }
+
+  .contactBlock {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 429px) {
+  .imageDiv {
+    background-position: 0px 0px, 50% 50%;
+  }
+}

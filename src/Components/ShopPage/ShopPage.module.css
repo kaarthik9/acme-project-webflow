@@ -1,0 +1,92 @@
+.featuredSection {
+  padding-bottom: 0px;
+  padding-top: 65px;
+}
+
+.featuredWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+  border-radius: 5px;
+  background-image: url("https://assets.website-files.com/5e853c3383474026e43f2c78/5e856e41c718420c18dd6751_patrick-hendry-eDgUyGu93Yw-unsplash.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  color: #f9f9f9;
+  text-decoration: none;
+  max-width: 100%;
+  display: inline-block;
+}
+
+.featuredPill {
+  position: absolute;
+  left: auto;
+  top: 8%;
+  right: 1%;
+  bottom: auto;
+  z-index: 10;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #222;
+  margin-right: 10px;
+  padding: 5px 20px;
+}
+
+.featuredTextWrapper {
+  position: absolute;
+  left: 2%;
+  top: auto;
+  right: auto;
+  bottom: 6%;
+  z-index: 10;
+}
+
+.featuredItemName {
+  position: static;
+  left: 1%;
+  top: auto;
+  right: auto;
+  bottom: 0%;
+  margin-bottom: 5px;
+  color: #f9f9f9;
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 20px;
+}
+
+.featuredPrice {
+  position: static;
+  left: 0%;
+  top: auto;
+  right: auto;
+  bottom: 0%;
+}
+
+.featuredGradient {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  border-radius: 5px;
+  background-image: linear-gradient(180deg, rgba(34, 34, 34, 0.22), rgba(34, 34, 34, 0.69));
+}
+
+.contentSection {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.shopPageWrapper {
+  display: flex;
+}
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+  .shopPageWrapper {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,48 @@
+
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px 15px;
+}
+
+.Wrapper {
+  align-items: flex-start;
+}
+
+.heroHeading {
+  width: 35%;
+  font-size: 62px;
+}
+
+.heroBtn {
+  display: inline-block;
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    padding: 0px 15px;
+  }
+  .heroHeading {
+    width: 60%;
+  }
+  .heroPara {
+    width: 55%;
+  }
+}
+
+
+@media screen and (max-width: 479px) {
+  .heroWrapper {
+    padding-bottom: 45px;
+    justify-content: flex-end;
+  }
+
+  .heroHeading {
+    font-size: 30px;
+  }
+
+  .heroPara {
+    width: 70%;
+    font-size: 13px;
+  }
+}

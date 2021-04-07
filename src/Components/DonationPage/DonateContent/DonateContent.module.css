@@ -1,0 +1,49 @@
+.donateWrapper {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 30px 30px 10px;
+  border: 2px solid #222;
+  border-radius: 5px;
+}
+
+.donateLink {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: #eb5757;
+  transition: background-color 300ms ease;
+  color: #f9f9f9;
+  text-align: center;
+  text-decoration: none;
+  max-width: 100%;
+  display: inline-block;
+}
+
+.donateLink:hover {
+  border: none;
+}
+
+.textBlock {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+  color: #f9f9f9;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 767px) {
+  .donateWrapper {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .donateWrapper {
+    width: 100%;
+  }
+}

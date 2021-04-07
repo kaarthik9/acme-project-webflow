@@ -1,0 +1,231 @@
+.section {
+  background-image: linear-gradient(360deg, #222, rgba(34, 34, 34, 0)),
+                    url("https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e840df8e2c9cc7677e4f00e_felix-rostig-UmV2wr-Vbq8-unsplash.jpg");
+}
+
+.Wrapper {
+  align-items: flex-start;
+}
+
+.heading {
+  width: 40%;
+  font-size: 62px;
+}
+
+.heroBtn {
+  display: inline-block;
+}
+
+.contentSection {
+  padding-top: 65px;
+  padding-bottom: 0px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.whyAcmeBlock {
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.smallText {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.acmeHeading {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.acmePara {
+  text-align: center;
+}
+
+.aboutColumnsWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aboutColumn {
+  width: 22%;
+}
+
+.image {
+  display: block;
+}
+
+.meetTheOwnersWrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.meetTheOwnersLeft {
+  position: absolute;
+  left: 0%;
+  top: 5%;
+  right: auto;
+  bottom: 0%;
+  width: 45%;
+  height: 90%;
+  border-radius: 5px;
+  background-image: url("https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e84cdfbaf8c176df76d51a3_sept-commercial-Cqu3DdNwtKQ-unsplash%20(1)%20(1).jpg");
+  background-position: 50% 100%;
+  background-size: cover;
+}
+
+.meetTheOwnersRight {
+  width: 70%;
+  padding: 90px 55px 90px 245px;
+  border-radius: 5px;
+  background-color: #222;
+  color: #f9f9f9;
+}
+
+.ownersRichText h2 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+
+/* Bios section */
+.ownerBiosWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ownerBio {
+  display: flex;
+  width: 35%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ownerAvatarWrapper {
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.ownerBioParagraph {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+
+
+@media screen and (max-width: 991px) {
+  .heading {
+    width: 60%;
+  }
+  .para {
+    width: 55%;
+  }
+
+  .container {
+    padding-left: 15px;  
+    padding-right: 15px;  
+  }
+
+  .meetTheOwnersLeft {
+    background-position: 50% 100%;
+  }
+
+  .meetTheOwnersRight {
+    padding-left: 145px;
+  }
+
+  .ownerBiosContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .aboutColumnsWrapper {
+    flex-wrap: wrap;
+  }
+
+  .meetTheOwnersWrapper {
+    flex-direction: column;
+  }
+
+  .meetTheOwnersLeft {
+    position: static;
+    width: 100%;
+    height: 400px;
+    border-radius: 0px;
+  }
+
+  .meetTheOwnersRight {
+    width: 100%;
+    padding-left: 45px;
+    padding-right: 45px;
+    border-radius: 0px;
+  }
+  
+  .aboutColumn {
+    display: flex;
+    width: 100%;
+    margin-bottom: 45px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ownerBiosWrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .ownerBio {
+    width: 100%;
+    margin-bottom: 45px;
+  }
+
+  
+}
+
+
+@media screen and (max-width: 479px) {
+  .wrapper {
+    padding-bottom: 45px;
+    justify-content: flex-end;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+
+  .para {
+    width: 70%;
+    font-size: 13px;
+  }
+
+  .whyAcmeBlock {
+    width: 100%;
+  }
+
+  .aboutColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  
+}

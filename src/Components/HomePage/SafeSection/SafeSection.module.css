@@ -1,0 +1,56 @@
+.section {
+  background-image: linear-gradient(180deg, rgba(34, 34, 34, 0.17), #222),
+    url("https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e83fb3a6948e1f05b20527f_nathan-dumlao-pLoMDKtl-JY-unsplash.jpg");
+}
+
+.wrapper {
+  align-items: flex-end;
+}
+
+.heading {
+  width: 45%;
+  color: #f9f9f9;
+  font-size: 45px;
+  text-align: right;
+}
+
+.para {
+  text-align: right;
+}
+
+.btn {
+  background-color: #f9f9f9;
+  border: 1px sold #f9f9f9;
+  color: #000;
+}
+
+.btn:hover {
+  background-color: #eb5757;
+  border: 1px solid #eb5757;
+  color: #f9f9f9;
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    padding-bottom: 25px;
+    justify-content: flex-end;
+  }
+}
+
+
+@media screen and (max-width: 479px) {
+  .wrapper {
+    padding-bottom: 45px;
+    justify-content: flex-end;
+  }
+
+  .heading {
+    font-size: 30px;
+    width: 100%;
+  }
+
+  .para {
+    width: 70%;
+    font-size: 13px;
+  }
+}

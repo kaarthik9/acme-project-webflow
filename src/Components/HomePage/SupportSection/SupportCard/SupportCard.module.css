@@ -1,0 +1,78 @@
+.supportColumn {
+  width: 30%;
+  min-height: 200px;
+}
+
+.supportSquare {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  min-height: 350px;
+  margin-bottom: 45px;
+  background-color: #222;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.supportSquareNumber {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  right: auto;
+  bottom: auto;
+  color: #f9f9f9;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.supportSquareText {
+  color: #f9f9f9;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.supportSquareImage {
+  position: absolute;
+  left: auto;
+  top: auto;
+}
+
+.circle {
+  right: -25%;
+  bottom: -25%;
+}
+
+.triangle {
+  right: -11%;
+  bottom: -17%;
+}
+
+.square {
+  right: -14%;
+  bottom: -31%;
+}
+
+@media screen and (max-width: 991px) {
+  .supportSquare {
+    min-height: 330px;
+  }
+
+  .supportSquareText {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .supportColumn {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .supportSquareText {
+    font-size: 40px;
+  }
+}
