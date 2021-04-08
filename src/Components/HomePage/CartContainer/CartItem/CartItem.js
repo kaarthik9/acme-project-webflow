@@ -6,7 +6,9 @@ export default function CartItem({ productName, price, name, quantity, cartItems
 
   // Removes item from cart
   const removeItem = () => {
-    setCartItems(prevState => delete prevState[nickname])
+    let oldCartItems = {...cartItems}
+    delete oldCartItems[nickname]
+    setCartItems(oldCartItems)
   }
 
   
