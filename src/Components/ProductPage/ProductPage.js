@@ -2,9 +2,53 @@ import React from "react";
 import PageHeading from "../Utilities/PageHeading/PageHeading";
 import styles from "./ProductPage.module.css";
 import ProductText from "./ProductText/ProductText"
+import { useState } from "react";
 
-export default function ProductPage({ name, productName, amount, sale }) {
+export default function ProductPage(props) {
+
+  let [quantity, setQuantity] = useState(1)
+  // Updates quantity
+  const updateQuantity = (e) => {
+    setQuantity(e.target.value)
+  }
+
+  let name, productName, sale, nickname, price;
+  productName = props.match.params.name
+
+  // Sets product properties
+  if (productName === 'white-tent') {
+    name = 'White Tent'
+    price = '200.00'
+    nickname = 'white'
+  } else if (productName === 'tin-coffee-tumbler') {
+    name = 'Tin Coffee Tumbler'
+    price = '35.00'
+    nickname = 'coffee'
+  } else if (productName === 'blue-canvas-pack') {
+    name = 'Blue Canvas Pack'
+    price = '95.00'
+    sale = '145.00'
+    nickname = 'blue'
+  } else if (productName === 'green-canvas-pack') {
+    name = 'Green Canvas Pack'
+    price = '125.00'
+    nickname = 'green'
+  } else if (productName === 'gift-card') {
+    name = 'Gift Card'
+    price = '25.00'
+    nickname = 'gift'
+  }
   document.title = name;
+
+  // Adds to cart
+  const sendToCart = (e) => {
+    e.preventDefault();
+    props.addCartItems(nickname, name, quantity, productName, price)
+
+  }
+
+  document.title = name;
+
   return (
     <div>
       <PageHeading heading={name} />
@@ -25,7 +69,7 @@ export default function ProductPage({ name, productName, amount, sale }) {
               <h2 className={styles.productHeading}>{name}</h2>
 
               <div className={styles.priceWrapper}>
-                <div className={styles.shopItemPrice}>$ {amount}.00 USD</div>
+                <div className={styles.shopItemPrice}>$ {price}.00 USD</div>
                 {sale && (
                   <div
                     className={
@@ -38,7 +82,7 @@ export default function ProductPage({ name, productName, amount, sale }) {
               </div>
 
               <div>
-                <form className={styles.addToCartForm}>
+                <form className={styles.addToCartForm} onSubmit={sendToCart}>
                   <label for="quantity">Quantity</label>
 
                   <div className={styles.addToCartWrapper}>
@@ -49,7 +93,8 @@ export default function ProductPage({ name, productName, amount, sale }) {
                       id="quantity"
                       min="1"
                       className={styles.quantityInput}
-                      value="1"
+                      value={quantity}
+                      onChange={updateQuantity}
                     />
 
                     <input

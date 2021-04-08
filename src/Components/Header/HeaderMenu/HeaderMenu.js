@@ -5,14 +5,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import CartContainer from "../../HomePage/CartContainer/CartContainer";
 
-export default function HeaderMenu({ showCart, showTheCart }) {
-  const cartDetailsStyles = {
-    transform: "translateX(100%)",
-  };
-
-  showCart
-    ? (cartDetailsStyles.transform = "translateX(0)")
-    : (cartDetailsStyles.transform = "translateX(100%)");
+export default function HeaderMenu({
+  showCart,
+  hideCart,
+  cartItems,
+  cartSubtotal,
+  setCartItems,
+  showOverlayMenu,
+  showOverlay
+}) {
+  let cartQuantity = Object.keys(cartItems).length;
 
   return (
     <Router>
@@ -36,57 +38,52 @@ export default function HeaderMenu({ showCart, showTheCart }) {
                 <NavBtn text="Contact" path="/contact" />
               </div>
 
-              <Link onClick={() => showTheCart()} className={styles.cart}>
+              <div onClick={hideCart} className={styles.cart}>
                 <img
                   src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e86146bb854797d12a30a13_cart.svg"
                   className={styles.cartIcon}
                 />
-                <div className={styles.cartQuantity}>P</div>
-              </Link>
+                <div className={styles.cartQuantity}>{cartQuantity}</div>
+              </div>
 
-              <div className={styles.burgerDiv}>
+              <div onClick={showOverlayMenu} className={styles.burgerDiv}>
                 <div className={styles.burger}>
                   <FontAwesomeIcon icon={faBars} />
                 </div>
               </div>
 
-              {/* {showCart && } */}
-
-              {/* <CartContainer /> */}
-
-              {/* Cart container */}
-              {/* <div className={styles.cartContainer}>
-                <div className={styles.cartDetails}>
-                  <div className={styles.cartHeader}>
-                    <h4>Your Cart</h4>
-                    <div className={styles.hideCart}>
-                      <FontAwesomeIcon className={styles.hideCartLogo} icon={faTimes} />
-                    </div>
-                  </div>
-                </div>
-                
-              </div> */}
+              {showCart && (
+                <CartContainer
+                  setCartItems={setCartItems}
+                  showCart={showCart}
+                  cartItems={cartItems}
+                  cartSubtotal={cartSubtotal}
+                  hideCart={hideCart}
+                />
+              )}
             </div>
           </div>
         </div>
 
-        {/* <div className={styles.navOverlay}>
+        {/* Overlay nav */}
+        {showOverlay && <div className={styles.navOverlay}>
           <div className={styles.navMenu}>
-            <NavBtn text="Home" path="/" />
-            <NavBtn text="About" path="/about" />
-            <NavBtn text="Shop" path="/shop" />
-            <NavBtn text="Donate" path="/donations" />
-            <NavBtn text="Contact" path="/contact" />
+            <NavBtn showOverlayMenu={showOverlayMenu} text="Home" path="/" />
+            <NavBtn showOverlayMenu={showOverlayMenu} text="About" path="/about" />
+            <NavBtn showOverlayMenu={showOverlayMenu} text="Shop" path="/shop" />
+            <NavBtn showOverlayMenu={showOverlayMenu} text="Donate" path="/donations" />
+            <NavBtn showOverlayMenu={showOverlayMenu} text="Contact" path="/contact" />
           </div>
-        </div> */}
+        </div>}
+
       </div>
     </Router>
   );
 }
 
-function NavBtn({ text, path }) {
+function NavBtn({ text, path, showOverlayMenu }) {
   return (
-    <Link to={path} className={"btn btn-orange " + styles.navButton}>
+    <Link to={path} onClick={showOverlayMenu} className={"btn btn-orange " + styles.navButton}>
       {text}
     </Link>
   );

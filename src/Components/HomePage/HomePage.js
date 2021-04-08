@@ -6,6 +6,7 @@ import SafeSection from './SafeSection/SafeSection'
 import ShopLocalSection from './ShopLocalSection/ShopLocalSection'
 
 export default function HomePage() {
+  document.title = 'Home'
   return (
     <>
       <Hero />

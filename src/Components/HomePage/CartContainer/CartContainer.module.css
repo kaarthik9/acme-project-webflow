@@ -9,8 +9,7 @@
   bottom: 0px;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.8);
-  /* transform: translateX(100%); */
-  transition: transform 1s ease-in 0s;
+  transition: opacity 1s ease-in 0s backwards;
 }
 
 .cartDetails {

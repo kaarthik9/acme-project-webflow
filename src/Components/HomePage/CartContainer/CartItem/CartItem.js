@@ -1,21 +1,28 @@
 import React from "react";
 import styles from "./CartItem.module.css";
+import { useState } from "react";
 
-export default function CartItem({ productName, price }) {
+export default function CartItem({ productName, price, name, quantity, cartItems, setCartItems, nickname }) {
+
+  // Removes item from cart
+  const removeItem = () => {
+    setCartItems(prevState => delete prevState[nickname])
+  }
+
+  
   return (
     <div className={styles.cartItem}>
-      {/* Change HERE IMPPPPPP IMPP */}
-      <div className={styles.cartImage + " blue-canvas-pack"}></div>
+      <div className={styles.cartImage + " "+productName}></div>
 
       <div className={styles.cartItemInfo}>
-        <div className={styles.cartItemName}>Blue Canvas Pack</div>
-        <div className={styles.cartItemprice}>$ 95{price}.00 USD</div>
+        <div className={styles.cartItemName}>{name}</div>
+        <div className={styles.cartItemprice}>$ {price}.00 USD</div>
 
-        <div className={styles.cartItemRemove}>Remove</div>
+        <div onClick={removeItem} className={styles.cartItemRemove}>Remove</div>
       </div>
 
       <input
-        value="4"
+        value={quantity}
         className={styles.cartQuantity}
         pattern="^[0-9]+$"
         type="number"
