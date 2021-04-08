@@ -61,6 +61,7 @@ function App() {
   return (
     <Router history={history}>
       <div className={styles.App}>
+
         <Header
           setCartItems={setCartItems}
           showCart={showCart}
