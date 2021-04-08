@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 export default function Page404() {
   document.title = "Not Found"
   return (
-    <Router>
       <div className={styles.pageWrapper}>
         <div className={styles.pageContent}>
           <img
@@ -22,6 +21,5 @@ export default function Page404() {
           </p>
         </div>
       </div>
-    </Router>
   );
 }
