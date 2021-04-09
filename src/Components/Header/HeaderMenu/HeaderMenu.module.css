@@ -1,5 +1,6 @@
 .navbar {
   padding: 20px 0px;
+  position: relative;
 }
 
 .container {
@@ -93,16 +94,16 @@
   height: 6421px;
   background-color: #eb5757;
   display: block;
-  width: 375px;
+  position: absolute;
   left: auto;
+  width: 100vw;
   z-index: 1;
   top: 0;
-  position: absolute;
   overflow: hidden;
 }
 
 .navOverlay .navMenu {
-  height: 6421px;
+  /* height: 6421px; */
   width: 100vw;
   padding-top: 140px;
   padding-bottom: 30px;
@@ -113,7 +114,6 @@
   display: block;
   position: absolute;
   right: 0;
-  background: #C8C8C8;
   text-align: center;
   overflow: visible;
   min-width: 200px;

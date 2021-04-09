@@ -13,6 +13,7 @@ export default function HeaderMenu({
   setCartItems,
   showOverlayMenu,
   showOverlay,
+  burgerStyles
 }) {
   let cartQuantity = Object.keys(cartItems).length;
 
@@ -45,7 +46,7 @@ export default function HeaderMenu({
               <div className={styles.cartQuantity}>{cartQuantity}</div>
             </div>
 
-            <div onClick={showOverlayMenu} className={styles.burgerDiv}>
+            <div onClick={showOverlayMenu} style={burgerStyles} className={styles.burgerDiv}>
               <div className={styles.burger}>
                 <FontAwesomeIcon icon={faBars} />
               </div>

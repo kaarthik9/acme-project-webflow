@@ -10,7 +10,8 @@ export default function Header({
   cartSubtotal,
   setCartItems,
   showOverlayMenu,
-  showOverlay
+  showOverlay,
+  burgerStyles
 }) {
   return (
     <div className={styles.header}>
@@ -23,6 +24,7 @@ export default function Header({
         hideCart={hideCart}
         showOverlayMenu={showOverlayMenu}
         showOverlay={showOverlay}
+        burgerStyles={burgerStyles}
       />
     </div>
   );

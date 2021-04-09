@@ -14,6 +14,7 @@ import { createBrowserHistory as history } from "history";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import Route from "react-router-dom/Route"
 import CovidPage from "./Components/CovidPage/CovidPage";
+import ShopByCategory from "./Components/ShopPage/ShopByCategory/ShopByCategory";
 
 function App() {
   const [showCart, setShowCart] = useState(false);
@@ -21,14 +22,21 @@ function App() {
   const [cartSubtotal, setCartSubtotal] = useState(0);
   const [showOverlay, setShowOverlay] = useState(false);
 
+  const [burgerStyles, setBurgerStyles] = useState({})
+
   // Hides the cart
   const hideCart = () => {
     setShowCart((prevState) => !prevState);
   };
 
-  // ShowOverlay
+  // ShowOverlay Menu
   const showOverlayMenu = () => {
     setShowOverlay((prevState) => !prevState);
+    if (burgerStyles.backgroundColor) {
+      setBurgerStyles({})
+    } else {
+      setBurgerStyles({backgroundColor: '#000', zIndex: '999', borderRadius: '5px'})
+    }
   };
 
   const addCartItems = (nickname, name, quantity, productName, price) => {
@@ -70,12 +78,14 @@ function App() {
           hideCart={hideCart}
           showOverlayMenu={showOverlayMenu}
           showOverlay={showOverlay}
+          burgerStyles={burgerStyles}
         />
-
+  
         <Switch>
-          <Route exact path="/" render={() => <HomePage />} />
+          <Route exact path="/" component={HomePage} />
           <Route path="/about" component={AboutPage} />
           <Route path="/shop" component={ShopPage} />
+          <Route path="/category/:category" component={ShopByCategory} />
           <Route path="/donations" component={DonationPage} />
           <Route path="/alert/how-were-responding-to-covid-19" component={CovidPage} />
           <Route path="/contact" component={ContactPage} />

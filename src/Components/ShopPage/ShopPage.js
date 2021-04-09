@@ -5,13 +5,14 @@ import styles from "./ShopPage.module.css";
 import CategoryMenu from "../Utilities/CategoryMenu/CategoryMenu";
 import ShopList from "./ShopList/ShopList";
 
-export default function ShopPage() {
+export default function ShopPage({category}) {
   document.title = "Shop";
+  console.log(category)
   return (
     <div>
       <PageHeading heading="Shop Our Products" />
 
-      <div className={styles.featuredSection}>
+      {!category && <div className={styles.featuredSection}>
         <div className="container">
           <div className="list-item">
             <Link to="/product/white-tent" className={styles.featuredWrapper}>
@@ -26,13 +27,13 @@ export default function ShopPage() {
             </Link>
           </div>
         </div>
-      </div>
+      </div>}
 
       <div className={styles.contentSection}>
         <div className="container">
           <div className={styles.shopPageWrapper}>
             <CategoryMenu />
-            <ShopList />
+            <ShopList category={category} />
           </div>
         </div>
       </div>
